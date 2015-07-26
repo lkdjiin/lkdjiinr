@@ -1,0 +1,8 @@
+Package: lkdjiinr
+Title: My Utiliy Functions
+Version: 0.0.1
+Authors@R: person("Xavier", "Nayrac", email = "xavier.nayrac@gmail.com", role = c("aut", "cre"))
+Description: This is a collection of utility functions to work interactivly.
+Depends: R (>= 3.2.1)
+License: MIT
+LazyData: true
