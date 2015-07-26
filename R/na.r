@@ -34,7 +34,7 @@ na_prop <- function(x) na_count(x) / length(x)
 #' @return A number between 0 (no NAs) and 100 (all values are NAs).
 #' @examples
 #' x <- c(NA, 'a', 'b', NA, 'c')
-#' na_prop(x)
+#' na_percent(x)
 #' #=> 40
 #' @seealso \code{\link{na_prop}}
 na_percent <- function(x) na_prop(x) * 100
