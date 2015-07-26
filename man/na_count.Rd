@@ -18,7 +18,7 @@ Count number of NAs in a vector.
 \examples{
 x <- c(NA, 'a', 'b', NA, 'c')
 na_count(x)
-# 2
+#=> 2
 }
 \seealso{
 \code{\link{nas}}

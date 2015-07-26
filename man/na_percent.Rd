@@ -17,8 +17,8 @@ What percentage of NA values are in a vector?
 }
 \examples{
 x <- c(NA, 'a', 'b', NA, 'c')
-na_prop(x)
-# 40
+na_percent(x)
+#=> 40
 }
 \seealso{
 \code{\link{na_prop}}
