@@ -6,7 +6,7 @@ This is mostly a pretext to make my first R package ;)
 
 ## Install
 
-    install_github('lkdjiinr', 'lkdjiin')
+    install_github('lkdjiin/lkdjiinr')
 
 ## Usage
 
