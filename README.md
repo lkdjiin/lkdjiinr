@@ -89,12 +89,6 @@ alias for `.Last.value`.*
     getwd()
     #=> "foo"
 
-**`cddd`** Change Directory Dot Dot.
-
-*Move up one directory level. Same as UNIX `cd ..`.*
-
-    cddd()
-
 
 ## License
 

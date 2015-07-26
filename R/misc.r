@@ -33,11 +33,3 @@ now <- Sys.time
 #' @seealso \code{\link{setwd}}
 cd <- setwd
 
-#' Change Directory Dot Dot.
-#'
-#' Move up one directory level. Same as UNIX `cd ..`.
-#'
-#' @examples
-#' cddd()
-cddd <- setwd('..')
-
