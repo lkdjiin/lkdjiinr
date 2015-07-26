@@ -5,7 +5,7 @@
 #' @examples
 #' x <- c(NA, 'a', 'b', NA, 'c')
 #' na_count(x)
-#' # 2
+#' #=> 2
 #' @seealso \code{\link{nas}}
 na_count <- function(x) sum(is.na(x))
 
@@ -22,7 +22,7 @@ nas <- function(x) na_count(x)
 #' @examples
 #' x <- c(NA, 'a', 'b', NA, 'c')
 #' na_prop(x)
-#' # 0.4
+#' #=> 0.4
 #' @seealso \code{\link{na_percent}}
 na_prop <- function(x) na_count(x) / length(x)
 
@@ -35,6 +35,6 @@ na_prop <- function(x) na_count(x) / length(x)
 #' @examples
 #' x <- c(NA, 'a', 'b', NA, 'c')
 #' na_prop(x)
-#' # 40
+#' #=> 40
 #' @seealso \code{\link{na_prop}}
 na_percent <- function(x) na_prop(x) * 100
