@@ -51,15 +51,29 @@ na_prop <- function(x) {
     }
 }
 
-#' Percentage of NAs in a vector.
+#' Percentage of NAs in a Vector or a Data Frame.
 #'
-#' What percentage of NA values are in a vector?
+#' What percentage of NA values are in a vector or in each variable of a
+#' data frame?
 #'
-#' @param x A vector.
-#' @return A number between 0 (no NAs) and 100 (all values are NAs).
+#' @param x A vector or a data frame.
+#' @return The percentage (between 0: no NAs, and 100: all values are
+#' NAs) of the object x.
 #' @examples
 #' x <- c(NA, 'a', 'b', NA, 'c')
 #' na_percent(x)
 #' #=> 40
+#'
+#' df <- data.frame(x=c(1, 2), y=c(3, NA), z=c(NA, NA))
+#' na_percent(df)
+#' #=> x   y   z 
+#' #=> 0  50 100 
 #' @seealso \code{\link{na_prop}}
-na_percent <- function(x) na_prop(x) * 100
+na_percent <- function(x) {
+    vector_percent <- function(λ) na_prop(λ) * 100
+    if(is.data.frame(x)) {
+        sapply(x, vector_percent)
+    } else {
+        vector_percent(x)
+    }
+}

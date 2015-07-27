@@ -7,10 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
-- `na_count`, `na_prop` works now with data frames as well as with vectors.
-Previous behavior was to deal with all the NAs in a data frame as a whole.
-Now a call of one of those functions on a data frame returns a vector with a
-value for each variable in the data frame.
+- `na_count`, `na_prop` and `na_percent` now works with data frames as well as
+with vectors.  Previous behavior was to deal with all the NAs in a data frame
+as a whole.  Now a call of one of those functions on a data frame returns a
+vector with a value for each variable in the data frame.
 
 ### Removed
 

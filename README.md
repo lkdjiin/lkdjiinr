@@ -48,7 +48,7 @@ na_count(df)
 
 **`nas`** Alias to `na_count`
 
-**`na_prop`** Proportion of NAs in a vector.
+**`na_prop`** Proportion of NAs in a vector or a data frame.
 
 ```r
 x <- c(NA, 'a', 'b', NA, 'c')
@@ -63,11 +63,20 @@ na_prop(df)
 #=> 0.0 0.5 1.0
 ```
 
-**`na_percent`** Percentage of NAs in a vector.
+**`na_percent`** Percentage of NAs in a vector or a data frame.
 
-    x <- c(NA, 'a', 'b', NA, 'c')
-    na_percent(x)
-    #=> 40
+```r
+x <- c(NA, 'a', 'b', NA, 'c')
+na_percent(x)
+#=> 40
+```
+
+```r
+df <- data.frame(x=c(1, 2), y=c(3, NA), z=c(NA, NA))
+na_percent(df)
+#=> x   y   z 
+#=> 0  50 100 
+```
 
 ### String Functions
 

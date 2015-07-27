@@ -2,23 +2,30 @@
 % Please edit documentation in R/na.r
 \name{na_percent}
 \alias{na_percent}
-\title{Percentage of NAs in a vector.}
+\title{Percentage of NAs in a Vector or a Data Frame.}
 \usage{
 na_percent(x)
 }
 \arguments{
-\item{x}{A vector.}
+\item{x}{A vector or a data frame.}
 }
 \value{
-A number between 0 (no NAs) and 100 (all values are NAs).
+The percentage (between 0: no NAs, and 100: all values are
+NAs) of the object x.
 }
 \description{
-What percentage of NA values are in a vector?
+What percentage of NA values are in a vector or in each variable of a
+data frame?
 }
 \examples{
 x <- c(NA, 'a', 'b', NA, 'c')
 na_percent(x)
 #=> 40
+
+df <- data.frame(x=c(1, 2), y=c(3, NA), z=c(NA, NA))
+na_percent(df)
+#=> x   y   z
+#=> 0  50 100
 }
 \seealso{
 \code{\link{na_prop}}
