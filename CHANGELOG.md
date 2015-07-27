@@ -5,15 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - unreleased
 
+## [0.0.3] - 2015-07-27
 ### Changed
-
 - `na_count`, `na_prop` and `na_percent` now works with data frames as well as
 with vectors.  Previous behavior was to deal with all the NAs in a data frame
 as a whole.  Now a call of one of those functions on a data frame returns a
 vector with a value for each variable in the data frame.
 
 ### Removed
-
 - The operator %+% to concatenate two strings is removed. It was a joke and
 clashes with the same operator from ggplot2.
 
