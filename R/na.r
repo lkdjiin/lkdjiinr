@@ -1,13 +1,25 @@
-#' Count number of NAs in a vector.
+#' Count Number of NAs in a Vector or a Data Frame.
 #'
-#' @param x A vector.
-#' @return The number of NAs in the vector x.
+#' @param x A vector or a data frame.
+#' @return The number of NAs in the object x.
 #' @examples
 #' x <- c(NA, 'a', 'b', NA, 'c')
 #' na_count(x)
 #' #=> 2
+#'
+#' df <- data.frame(x=c(1, 2), y=c(3, NA), z=c(NA, NA))
+#' na_count(df)
+#' #=> x y z
+#' #=> 0 1 2
 #' @seealso \code{\link{nas}}
-na_count <- function(x) sum(is.na(x))
+na_count <- function(x) {
+    if(is.data.frame(x)) {
+        sapply(x, function(λ) sum(is.na(λ)))
+    } else {
+        sum(is.na(x))
+    }
+}
+
 
 #' Alias for \code{na_count}
 #' @seealso \code{\link{na_count}}

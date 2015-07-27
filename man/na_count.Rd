@@ -2,23 +2,28 @@
 % Please edit documentation in R/na.r
 \name{na_count}
 \alias{na_count}
-\title{Count number of NAs in a vector.}
+\title{Count Number of NAs in a Vector or a Data Frame.}
 \usage{
 na_count(x)
 }
 \arguments{
-\item{x}{A vector.}
+\item{x}{A vector or a data frame.}
 }
 \value{
-The number of NAs in the vector x.
+The number of NAs in the object x.
 }
 \description{
-Count number of NAs in a vector.
+Count Number of NAs in a Vector or a Data Frame.
 }
 \examples{
 x <- c(NA, 'a', 'b', NA, 'c')
 na_count(x)
 #=> 2
+
+df <- data.frame(x=c(1, 2), y=c(3, NA), z=c(NA, NA))
+na_count(df)
+#=> x y z
+#=> 0 1 2
 }
 \seealso{
 \code{\link{nas}}

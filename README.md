@@ -31,11 +31,20 @@ your terminal, you'll have to recall `tw` again.*
 
 ### NAs Functions
 
-**`na_count`** Count number of NAs in a vector.
+**`na_count`** Count number of NAs in a vector or in a data frame.
 
-    x <- c(NA, 'a', 'b', NA, 'c')
-    na_count(x)
-    #=> 2
+```r
+x <- c(NA, 'a', 'b', NA, 'c')
+na_count(x)
+#=> 2
+```
+
+```r
+df <- data.frame(x=c(1, 2), y=c(3, NA), z=c(NA, NA))
+na_count(df)
+#=> x y z 
+#=> 0 1 2
+```
 
 **`nas`** Alias to `na_count`
 
