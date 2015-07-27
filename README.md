@@ -2,7 +2,8 @@
 
 Some of my personal R utility functions in a package.
 
-This is mostly a pretext to make my first R package ;)
+This is mostly a pretext to make my first R package, but I think you could
+find some functions useful.
 
 ## Install
 
@@ -120,3 +121,8 @@ alias for `.Last.value`.*
 ## License
 
 MIT
+
+## Questions and/or Comments
+
+Feel free to email [Xavier Nayrac](mailto:xavier.nayrac@gmail.com)
+with any questions, or contact me on [twitter](https://twitter.com/lkdjiin).
