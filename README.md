@@ -50,9 +50,18 @@ na_count(df)
 
 **`na_prop`** Proportion of NAs in a vector.
 
-    x <- c(NA, 'a', 'b', NA, 'c')
-    na_prop(x)
-    #=> 0.4
+```r
+x <- c(NA, 'a', 'b', NA, 'c')
+na_prop(x)
+#=> 0.4
+```
+
+```r
+df <- data.frame(x=c(1, 2), y=c(3, NA), z=c(NA, NA))
+na_prop(df)
+#=>   x   y   z 
+#=> 0.0 0.5 1.0
+```
 
 **`na_percent`** Percentage of NAs in a vector.
 

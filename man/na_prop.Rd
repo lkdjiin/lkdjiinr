@@ -2,23 +2,30 @@
 % Please edit documentation in R/na.r
 \name{na_prop}
 \alias{na_prop}
-\title{Proportion of NAs in a vector.}
+\title{Proportion of NAs in a Vector or a Data Frame.}
 \usage{
 na_prop(x)
 }
 \arguments{
-\item{x}{A vector.}
+\item{x}{A vector or data frame.}
 }
 \value{
-A number between 0 (no NAs) and 1 (all values are NAs).
+The proportion between 0 (no NAs) and 1 (all values are NAs)
+of the object x.
 }
 \description{
-What proportion of NA values are in a vector?
+What proportion of NA values are in a vector or in each variable of a
+data frame?
 }
 \examples{
 x <- c(NA, 'a', 'b', NA, 'c')
 na_prop(x)
 #=> 0.4
+
+df <- data.frame(x=c(1, 2), y=c(3, NA), z=c(NA, NA))
+na_prop(df)
+#=>   x   y   z
+#=> 0.0 0.5 1.0
 }
 \seealso{
 \code{\link{na_percent}}
