@@ -81,15 +81,7 @@ na_percent(df)
 
 ### String Functions
 
-**`%+%`** String Concatenation Operator.
-
-*Because, you know, the world is in great need of an operator to concatenate
-strings.*
-
-    "foo" %+% "bar"
-    #=> "foobar"
-
-**`tr`** Alias to chartr.
+**`tr`** Alias to chartr, with different argument's order.
 
     tr("foo", "o", "u")
     #=> "fuu"
