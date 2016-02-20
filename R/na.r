@@ -77,3 +77,15 @@ na_percent <- function(x) {
         vector_percent(x)
     }
 }
+
+#' Replace NAs with zeros.
+#'
+#' @param x A vector, data frame, or matrix.
+#' @return The object x with all NAs replaced by zeros.
+#' @examples
+#' na_zero(c(1, NA, 2))
+#' #=> 1 0 2
+na_zero <- function(x) {
+    x[is.na(x)] <- 0
+    x
+}

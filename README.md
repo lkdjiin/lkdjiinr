@@ -79,6 +79,14 @@ na_percent(df)
 #=> 0  50 100 
 ```
 
+**`na_zero`** Replace NAs by zeros in a vector, a data frame, or a matrix.
+
+```r
+x <- c(1, NA, 2, NA)
+na_zero(x)
+#=> 1 0 2 0
+```
+
 ### String Functions
 
 **`tr`** Alias to chartr, with different argument's order.
