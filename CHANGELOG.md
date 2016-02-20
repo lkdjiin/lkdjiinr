@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - unreleased
 
+## [0.1.0] - 2016-02-26
+### Added
+- `na_zero`, Replace all NAs in a vector, a data frame, or a matrix, by
+zeros.
+
 ## [0.0.3] - 2015-07-27
 ### Changed
 - `na_count`, `na_prop` and `na_percent` now works with data frames as well as
